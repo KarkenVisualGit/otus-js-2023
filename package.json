@@ -1,0 +1,22 @@
+{
+  "name": "otus-js-turarov-2023",
+  "version": "1.0.0",
+  "description": "JS Basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KarkenVisualGit/otus-js-turarov-2023.git"
+  },
+  "author": "KarkenTurarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarkenVisualGit/otus-js-turarov-2023/issues"
+  },
+  "homepage": "https://github.com/KarkenVisualGit/otus-js-turarov-2023#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
