@@ -1,9 +1,29 @@
 const objects = require('../src/Objects');
 
 describe('Test objects', () => {
-    it("returns ", () => {
-        jest.spyOn(window, "prompt").mockImplementation(() => "");
-        expect(objects()).toBe();
+    it("Enter user age returns age", () => {
+        jest.spyOn(window, "prompt").mockImplementation(() => "35");
+        expect(objects()).toEqual({name: 'John', age: 35, role: 'admin'});
     });
-   
   });
+
+  describe('Object mutation',() => {
+    it("adds age to the object", () => {
+        const obj = {name: 'John'};
+        jest.spyOn(window, "prompt").mockReturnValueOnce('35');
+
+        mutateObject(obj);
+        
+        expect(obj.age).toEqual(35);
+    });
+
+    it("Returns new object with role field", () => {
+        const obj = {name: 'John'};
+
+        const newObj = mutateObject(obj);
+
+        expect(obj).not.toBe(newObj);
+        expect(newobj.role).toBe('admin');
+        
+    });
+  })

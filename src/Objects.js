@@ -3,17 +3,19 @@ function objects() {
         name: 'John'
     };
     
-    let admin = new Object();
-    
     let input = prompt('Enter user age');
     user['age'] = +input;
+
+    let admin = new Object();
     
     Object.assign(admin, user,{role:'admin'});
     let {name, age, role} = admin;
     
-    console.log(user);
-    console.log(admin['name'] + " " + admin['age'] + " " + admin['role']);
-    console.log(name + " " + age + " " + role);
+    // console.log(user);
+    // console.log(admin['name'] + " " + admin['age'] + " " + admin['role']);
+    // console.log(name + " " + age + " " + role);
+
+    return admin;
 }
 
 
