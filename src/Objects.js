@@ -1,23 +1,22 @@
-function objects() {
-    let user = {
+ let user = {
         name: 'John'
     };
-    
+function  mutateObject(obj) {  
     let input = prompt('Enter user age');
-    user['age'] = +input;
+    obj['age'] = +input;
 
-    let admin = new Object();
+    let newObj = new Object();
     
-    Object.assign(admin, user,{role:'admin'});
-    let {name, age, role} = admin;
+    Object.assign(newObj, obj,{role:'admin'});
+    let {name, age, role} = newObj;
     
     // console.log(user);
     // console.log(admin['name'] + " " + admin['age'] + " " + admin['role']);
     // console.log(name + " " + age + " " + role);
 
-    return admin;
+    return newObj;
 }
 
 
 
-module.exports = objects
+module.exports = mutateObject

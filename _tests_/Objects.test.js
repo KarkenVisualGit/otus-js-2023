@@ -1,9 +1,10 @@
-const objects = require('../src/Objects');
+const mutateObject = require('../src/Objects');
 
 describe('Test objects', () => {
     it("Enter user age returns age", () => {
         jest.spyOn(window, "prompt").mockImplementation(() => "35");
-        expect(objects()).toEqual({name: 'John', age: 35, role: 'admin'});
+        const obj = {name: 'John'};
+        expect(mutateObject(obj)).toEqual({name: 'John', age: 35, role: 'admin'});
     });
   });
 
@@ -23,7 +24,7 @@ describe('Test objects', () => {
         const newObj = mutateObject(obj);
 
         expect(obj).not.toBe(newObj);
-        expect(newobj.role).toBe('admin');
+        expect(newObj.role).toBe('admin');
         
     });
   })
