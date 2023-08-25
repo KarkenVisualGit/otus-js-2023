@@ -1,6 +1,7 @@
 
 const nums = [5, 1, 3, 3, 7, 2, 5, 2, 2, 7];
 let sum = 0;
+let orderedArray = [];
 // for (let i = 0; i < 10; i++) {
 //     nums.push(Math.ceil(Math.random(0.5) * 7));
 // }
