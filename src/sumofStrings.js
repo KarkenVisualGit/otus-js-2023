@@ -1,5 +1,5 @@
 function sumofStrings(first, second) {
-    return first.length + second.length;
+    console.log(first.length + second.length);
 }
 
 const first = 'John';
