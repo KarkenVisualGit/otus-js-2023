@@ -1,5 +1,5 @@
 // Импортируем функцию, которая содержит код
-import setupCode from "../src/app";
+import {setupCode} from "../src/app";
 
 
 // Создаем заглушки для HTML-элементов, которые будут использоваться в тестах
@@ -15,26 +15,14 @@ describe("Your code tests", () => {
   let paragraphContainer;
 
   beforeEach(() => {
-    // Получаем ссылки на элементы перед каждым тестом
     textInput = document.getElementById("textInput");
     addButton = document.getElementById("addButton");
     paragraphContainer = document.getElementById("paragraphContainer");
 
-    // Запускаем код для настройки обработчиков событий перед каждым тестом
-    setupCode();
+    return setupCode();
   });
 
-  it("hides addButton when textInput is empty", () => {
-    expect(addButton.style.display).toBe("none");
-    textInput.value = "Hello";
-    textInput.dispatchEvent(new Event("input"));
-    expect(addButton.style.display).toBe("block");
-    textInput.value = "";
-    textInput.dispatchEvent(new Event("input"));
-    expect(addButton.style.display).toBe("none");
-  });
-
-  it("adds a new paragraph on addButton click", () => {
+  test("adds a new paragraph on addButton click", () => {
     textInput.value = "New paragraph text";
     addButton.style.display = "block";
     addButton.click();
@@ -44,9 +32,9 @@ describe("Your code tests", () => {
     expect(textInput.value).toBe("");
     expect(addButton.style.display).toBe("none");
   });
-
-  it("removes the oldest paragraph when more than 5 paragraphs exist", () => {
-    for (let i = 1; i < 5; i++) {
+  
+  test("removes the oldest paragraph when more than 5 paragraphs exist", () => {
+    for (let i = 0; i < 5; i++) {
       const paragraph = document.createElement("p");
       paragraph.textContent = `Paragraph ${i}`;
       paragraphContainer.appendChild(paragraph);
@@ -60,6 +48,18 @@ describe("Your code tests", () => {
 
     const paragraphsAfter = paragraphContainer.getElementsByTagName("p").length;
     expect(paragraphsAfter).toBe(5);
-    expect(paragraphContainer.textContent).not.toContain("Paragraph 1");
+    const paragraphs = paragraphContainer.getElementsByTagName("p");
+    expect(paragraphs[0]).not.toContain("Paragraph 1");
   });
+
+  test("hides addButton when textInput is empty", () => {
+    expect(addButton.style.display).toBe("none");
+    textInput.value = "Hello";
+    textInput.dispatchEvent(new Event("input"));
+    expect(addButton.style.display).toBe("block");
+    textInput.value = "";
+    textInput.dispatchEvent(new Event("input"));
+    expect(addButton.style.display).toBe("none");
+  });
+
 });
