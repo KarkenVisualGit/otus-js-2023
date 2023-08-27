@@ -6,7 +6,7 @@ function monthName() {
     if (num > 12 || num < 1) {
         throw Error("Invalid number!");
     } else 
-    return arrMonth[num - 1];
+    console.log(arrMonth[num - 1]);
 }
 
 module.exports = monthName
