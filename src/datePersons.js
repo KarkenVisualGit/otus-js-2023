@@ -17,8 +17,8 @@ export function getOlder() {
     let diffDate = personDate1 - personDate2;
     diffDate = diffDate / 1000 / 60 / 60 / 24;
     function older() {
-        return diffDate > 0 ? person2.name + " is older":
-        person1.name + " is older";
+        return diffDate > 0 ? person2.name + " is younger":
+        person1.name + " is younger";
     }
     console.log(older());
 }
