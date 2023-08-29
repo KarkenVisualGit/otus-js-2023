@@ -14,11 +14,11 @@ export function getOlder() {
         date: personDate2,
         name: 'Second person'
     }
-    let diffDate = personDate1 - personDate2;
-    diffDate = diffDate / 1000 / 60 / 60 / 24;
+    let diffDate = (personDate1 / 1000 / 60 / 60 / 24) - (personDate2 / 1000 / 60 / 60 / 24);
+    // diffDate = diffDate / 1000 / 60 / 60 / 24;
     function older() {
-        return diffDate > 0 ? person2.name + " is younger":
-        person1.name + " is younger";
+        return diffDate > 0 ? person1.name + " is younger":
+        person2.name + " is younger";
     }
     console.log(older());
 }
