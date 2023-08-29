@@ -1,4 +1,4 @@
-import { calculateAgeDifference, getOlder } from '../src/datePersons';
+import { calculateAgeDifference, getYounger } from '../src/datePersons';
 
 describe('calculateAgeDifference', () => {
   it('calculates the correct age difference', () => {
@@ -22,7 +22,7 @@ describe('getOlder', () => {
       name: 'Second person'
     };
 
-    const result = getOlder(person1, person2);
+    const result = getYounger(person1, person2);
 
     expect(result).toBe('First person is younger');
   });

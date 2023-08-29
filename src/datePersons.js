@@ -6,7 +6,7 @@ export function calculateAgeDifference(date1, date2) {
     return diff1 - diff2;
 }
 
-export function getOlder(person1, person2) {
+export function getYounger(person1, person2) {
     const ageDifference = calculateAgeDifference(person1.date, person2.date);
 
     return ageDifference > 0 ? `${person2.name} is younger` : `${person1.name} is younger`;
