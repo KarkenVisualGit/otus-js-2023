@@ -12,7 +12,7 @@ describe('calculateAgeDifference', () => {
 });
 
 describe('getOlder', () => {
-  it('returns the correct result for the older person', () => {
+  it('returns the correct result for the younger person', () => {
     const person1 = {
       date: new Date('01.01.2000'),
       name: 'First person'
