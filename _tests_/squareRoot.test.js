@@ -8,13 +8,13 @@ describe("Test calculateSquareRoot", () => {
 
   const consoleLogSpy = jest.spyOn(console, "log").mockImplementation();
 
-  test("calculateSquareRoot calculates and logs correct roots", () => {
+  test("Must log correct roots", () => {
     calculateSquareRoot();
 
     expect(consoleLogSpy).toHaveBeenCalledWith("X1= 1", "X2 = -4");
   });
 
-  test("calculateSquareRoot logs \"The equation has no roots\" for negative discriminant", () => {
+  test("Must log 'The equation has no roots' for negative discriminant", () => {
     jest.clearAllMocks();
     jest
       .spyOn(window, "prompt")
@@ -27,7 +27,7 @@ describe("Test calculateSquareRoot", () => {
     expect(consoleLogSpy).toHaveBeenCalledWith("The equation has no roots");
   });
 
-  test("calculateSquareRoot calculates and logs one root", () => {
+  test("Must calculates and log one root", () => {
     jest.clearAllMocks();
     jest
       .spyOn(window, "prompt")

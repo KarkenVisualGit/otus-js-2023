@@ -1,6 +1,6 @@
 import { checkTriangleSides } from "../src/triangle";
 
-test("Triangle with valid sides should log \"Triangle is rectangle\"", () => {
+test("Triangle with valid sides should log 'Triangle is rectangle'", () => {
   const consoleLogSpy = jest.spyOn(console, "log").mockImplementation();
 
   checkTriangleSides(3, 4, 5);
