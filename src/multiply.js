@@ -1,5 +1,5 @@
 function multiply(a, b) {
-    console.log(a * b);
+  console.log(a * b);
 }
 
 const a = 5;

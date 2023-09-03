@@ -21,7 +21,7 @@ export function setupCode() {
     } else if (textInput.value === "") {
       addButton.style.display = "none";
     }
- 
+
     const paragraphs = paragraphContainer.getElementsByTagName("p");
     if (paragraphs.length > 5) {
       paragraphContainer.removeChild(paragraphs[0]);
@@ -35,7 +35,6 @@ export function setupCode() {
   };
 }
 
-
 setupCode();
 
-  // module.exports = setupCode
+// module.exports = setupCode

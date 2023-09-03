@@ -37,5 +37,4 @@ describe("Test averageSumOdd", () => {
     logSpy.mockRestore();
     expect(averageSumOdd()).toBe(30);
   });
-  
 });

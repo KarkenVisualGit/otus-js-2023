@@ -1,6 +1,5 @@
 // Импортируем функцию, которая содержит код
-import {setupCode} from "../src/app";
-
+import { setupCode } from "../src/app";
 
 // Создаем заглушки для HTML-элементов, которые будут использоваться в тестах
 document.body.innerHTML = `
@@ -32,14 +31,15 @@ describe("Your code tests", () => {
     expect(textInput.value).toBe("");
     expect(addButton.style.display).toBe("none");
   });
-  
+
   test("removes the oldest paragraph when more than 5 paragraphs exist", () => {
     for (let i = 0; i < 5; i++) {
       const paragraph = document.createElement("p");
       paragraph.textContent = `Paragraph ${i}`;
       paragraphContainer.appendChild(paragraph);
     }
-    const paragraphsBefore = paragraphContainer.getElementsByTagName("p").length;
+    const paragraphsBefore =
+      paragraphContainer.getElementsByTagName("p").length;
     expect(paragraphsBefore).toBe(6);
 
     textInput.value = "New paragraph text";
@@ -61,5 +61,4 @@ describe("Your code tests", () => {
     textInput.dispatchEvent(new Event("input"));
     expect(addButton.style.display).toBe("none");
   });
-
 });

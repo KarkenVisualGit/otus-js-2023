@@ -15,11 +15,11 @@ describe("getOlder", () => {
   it("returns the correct result for the younger person", () => {
     const person1 = {
       date: new Date("01.01.2000"),
-      name: "First person"
+      name: "First person",
     };
     const person2 = {
       date: new Date("01.01.1990"),
-      name: "Second person"
+      name: "Second person",
     };
 
     const result = getYounger(person1, person2);
