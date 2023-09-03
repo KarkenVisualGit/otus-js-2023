@@ -1,15 +1,15 @@
-const isWord = require('../src/isWord');
+const isWord = require("../src/isWord");
 
-describe('Test isWord', () => {
-    it("Must return true if it is only one word, another false", () => {
-        expect(isWord('MarryPoppins')).toEqual(true);
+describe("Test isWord", () => {
+    it("Must return true for only word MarryPoppins", () => {
+        expect(isWord("MarryPoppins")).toEqual(true);
     });
 
-    it("Must return true if it is only one word, another false", () => {
+    it("Must return false for Abay's Way", () => {
         expect(isWord("Abay's Way")).toEqual(false);
     });
 
-    it("Must return true if it is only one word, another false", () => {
-        expect(isWord('Chick' + '\n' + 'flick')).toEqual(false);
+    it("Must return false for Chick flick", () => {
+        expect(isWord("Chick" + "\n" + "flick")).toEqual(false);
     });
 });

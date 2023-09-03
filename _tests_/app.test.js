@@ -27,7 +27,7 @@ describe("Your code tests", () => {
     addButton.style.display = "block";
     addButton.click();
     const paragraphs = paragraphContainer.getElementsByTagName("p");
-    expect(paragraphs.length).toBe(1);
+    expect(paragraphs).toHaveLength(1);
     expect(paragraphs[0].textContent).toBe("New paragraph text");
     expect(textInput.value).toBe("");
     expect(addButton.style.display).toBe("none");

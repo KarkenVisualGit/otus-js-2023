@@ -1,5 +1,5 @@
-const circle = 200;
-const square = 300;
+// const circle = 200;
+// const square = 300;
 
 function isCirleInSquare(circle, square) {
     if (2 * Math.sqrt(circle / Math.PI) <= Math.sqrt(square)) {
@@ -10,4 +10,4 @@ function isCirleInSquare(circle, square) {
 
 
 
-module.exports = isCirleInSquare
+module.exports = isCirleInSquare;

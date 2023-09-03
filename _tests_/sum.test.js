@@ -1,7 +1,7 @@
-const sum = require('../src/sum');
+const sum = require("../src/sum");
 
-test('adds 1 + 2 to equal 3', () => {
-  const logSpy = jest.spyOn(global.console, 'log');
+test("adds 1 + 2 to equal 3", () => {
+  const logSpy = jest.spyOn(global.console, "log");
   sum(1, 2);
  
   expect(logSpy).toHaveBeenCalled();
@@ -11,8 +11,8 @@ test('adds 1 + 2 to equal 3', () => {
   logSpy.mockRestore();
 });
 
-test('adds 3 + 11 to equal 14', () => {
-  const logSpy = jest.spyOn(global.console, 'log');
+test("adds 3 + 11 to equal 14", () => {
+  const logSpy = jest.spyOn(global.console, "log");
   sum(3, 11);
  
   expect(logSpy).toHaveBeenCalled();
@@ -22,8 +22,8 @@ test('adds 3 + 11 to equal 14', () => {
   logSpy.mockRestore();
 });
 
-test('adds 17 + 11 to equal 28', () => {
-  const logSpy = jest.spyOn(global.console, 'log');
+test("adds 17 + 11 to equal 28", () => {
+  const logSpy = jest.spyOn(global.console, "log");
   sum(17, 11);
  
   expect(logSpy).toHaveBeenCalled();

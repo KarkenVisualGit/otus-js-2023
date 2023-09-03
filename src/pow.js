@@ -15,4 +15,4 @@ function pow(a, x) {
     return res;
 }
 
-module.exports = pow
+module.exports = pow;

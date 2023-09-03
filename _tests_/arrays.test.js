@@ -1,9 +1,9 @@
-const arrayElements = require('../src/arrays');
+const arrayElements = require("../src/arrays");
 
-describe('Test arrayElements', () => {
+describe("Test arrayElements for sum, min and max elements", () => {
     it("Must console log sum of elements, min and max elements", () => {
         const nums = [5, 1, 3, 3, 7, 2, 5, 2, 2, 7];
-        const logSpy = jest.spyOn(global.console, 'log');
+        const logSpy = jest.spyOn(global.console, "log");
         arrayElements(nums);
         
 
@@ -19,7 +19,7 @@ describe('Test arrayElements', () => {
         
     });
 });
-describe('Test arrayElements', () => {
+describe("Test arrayElements for returning doubled array", () => {
     it("Must return doubled array", () => {
         const nums = [5, 1, 3, 3, 7, 2, 5, 2, 2, 7];
         expect(arrayElements(nums)).toEqual([10, 2, 6, 6, 14, 4, 10, 4, 4, 14]);

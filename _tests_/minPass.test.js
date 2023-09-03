@@ -2,15 +2,15 @@ import { minPassed } from "../src/minPass";
 const RealDate = Date.now();
 
 beforeAll(() => {
-    global.Date.now = jest.fn(() => new Date('2023-08-27T20:53:30Z').getTime())
-})
+    global.Date.now = jest.fn(() => new Date("2023-08-27T20:53:30Z").getTime());
+});
 
 afterAll(() => {
-    global.Date.now = RealDate
-})
-describe('Test minPassed', () => {
+    global.Date.now = RealDate;
+});
+describe("Test minPassed", () => {
     it("returns minutes passed from today", async () => {
-        const logSpy = jest.spyOn(global.console, 'log');
+        const logSpy = jest.spyOn(global.console, "log");
         minPassed();
 
         expect(logSpy).toHaveBeenCalled();

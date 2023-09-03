@@ -1,7 +1,8 @@
-const sumofDigits = require('../src/sumofDigits');
+import {sumofDigits} from "../src/sumofDigits";
+// const sumofDigits = require('../src/sumofDigits');
 
-test('Sum of digits from 50 to 100 to be 3825)', () => {
-    const logSpy = jest.spyOn(global.console, 'log');
+test("Sum of digits from 50 to 100 to be 3825)", () => {
+    const logSpy = jest.spyOn(global.console, "log");
     sumofDigits();
 
     expect(logSpy).toHaveBeenCalled();

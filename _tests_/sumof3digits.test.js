@@ -1,9 +1,9 @@
-const sumof3digitNumber = require('../src/sumof3digits');
+const sumof3digitNumber = require("../src/sumof3digits");
 
 describe("sum of digits in 3-digit number", () => {
   it("returns 18 for 567", () => {
     jest.spyOn(window, "prompt").mockImplementation(() => "567");
-    const logSpy = jest.spyOn(global.console, 'log');
+    const logSpy = jest.spyOn(global.console, "log");
     sumof3digitNumber();
 
     expect(logSpy).toHaveBeenCalled();
@@ -14,7 +14,7 @@ describe("sum of digits in 3-digit number", () => {
   });
   it("returns 6 for 123", () => {
     jest.spyOn(window, "prompt").mockImplementation(() => "123");
-    const logSpy = jest.spyOn(global.console, 'log');
+    const logSpy = jest.spyOn(global.console, "log");
     sumof3digitNumber();
 
     expect(logSpy).toHaveBeenCalled();
@@ -25,7 +25,7 @@ describe("sum of digits in 3-digit number", () => {
   });
   it("returns 14 for 257", () => {
     jest.spyOn(window, "prompt").mockImplementation(() => "257");
-    const logSpy = jest.spyOn(global.console, 'log');
+    const logSpy = jest.spyOn(global.console, "log");
     sumof3digitNumber();
 
     expect(logSpy).toHaveBeenCalled();

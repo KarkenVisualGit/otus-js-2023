@@ -1,9 +1,9 @@
-import { calculateAgeDifference, getYounger } from '../src/datePersons';
+import { calculateAgeDifference, getYounger } from "../src/datePersons";
 
-describe('calculateAgeDifference', () => {
-  it('calculates the correct age difference', () => {
-    const date1 = new Date('01.01.2000');
-    const date2 = new Date('01.01.1990');
+describe("calculateAgeDifference", () => {
+  it("calculates the correct age difference", () => {
+    const date1 = new Date("01.01.2000");
+    const date2 = new Date("01.01.1990");
 
     const ageDifference = calculateAgeDifference(date1, date2);
 
@@ -11,19 +11,19 @@ describe('calculateAgeDifference', () => {
   });
 });
 
-describe('getOlder', () => {
-  it('returns the correct result for the younger person', () => {
+describe("getOlder", () => {
+  it("returns the correct result for the younger person", () => {
     const person1 = {
-      date: new Date('01.01.2000'),
-      name: 'First person'
+      date: new Date("01.01.2000"),
+      name: "First person"
     };
     const person2 = {
-      date: new Date('01.01.1990'),
-      name: 'Second person'
+      date: new Date("01.01.1990"),
+      name: "Second person"
     };
 
     const result = getYounger(person1, person2);
 
-    expect(result).toBe('First person is younger');
+    expect(result).toBe("First person is younger");
   });
 });

@@ -6,4 +6,4 @@ function isWord(str) {
         return false;
 }
 
-module.exports = isWord
+module.exports = isWord;

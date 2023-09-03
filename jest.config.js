@@ -4,7 +4,7 @@
  */
 
 /** @type {import('jest').Config} */
-process.env.TZ = 'GMT';
+process.env.TZ = "GMT";
 const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
