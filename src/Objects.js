@@ -5,9 +5,7 @@ function mutateObject(obj) {
   let input = prompt("Enter user age");
   obj["age"] = +input;
 
-  let admin = new Object();
-
-  Object.assign(admin, obj, { role: "admin" });
+  const admin = Object.assign({}, obj, { role: "admin" });
   let { name, age, role } = admin;
 
   // console.log(user);
