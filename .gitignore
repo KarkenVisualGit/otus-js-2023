@@ -1,0 +1,16 @@
+.cache/
+*.log*
+.ssh/
+node_modules
+coverage/
+.txt/
+Test/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
