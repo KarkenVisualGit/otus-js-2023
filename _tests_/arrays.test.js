@@ -1,4 +1,4 @@
-import {orderArray, getSum, doubleArray} from "../src/arrays";
+import { orderArray, getSum, doubleArray } from "../src/arrays";
 
 describe("Test arrayElements for sum, min and max elements", () => {
   it("Must console log sum of elements, min and max elements", () => {

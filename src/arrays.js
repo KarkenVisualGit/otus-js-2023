@@ -10,7 +10,6 @@ export function orderArray(nums) {
   console.log(min);
 }
 
-
 export function getSum(nums) {
   nums.forEach((element) => {
     sum += element;
@@ -19,9 +18,7 @@ export function getSum(nums) {
   return sum;
 }
 
-
 export function doubleArray(nums) {
   const array = nums.map((x) => x * 2);
   return array;
 }
-
