@@ -11,7 +11,7 @@ describe("calculateAgeDifference", () => {
   });
 });
 
-describe("getOlder", () => {
+describe("getYounger", () => {
   it("returns the correct result for the younger person", () => {
     const person1 = {
       date: new Date("01.01.2000"),
@@ -25,5 +25,21 @@ describe("getOlder", () => {
     const result = getYounger(person1, person2);
 
     expect(result).toBe("First person is younger");
+  });
+});
+
+describe("dates are equal", () => {
+  it("Throw an error if dates are equal", () => {
+    const person1 = {
+      date: new Date("01.01.2000"),
+      name: "First person",
+    };
+    const person2 = {
+      date: new Date("01.01.2000"),
+      name: "Second person",
+    };
+    expect(() => {
+      getYounger(person1, person2);
+    }).toThrowError("Dates are equal!");
   });
 });
