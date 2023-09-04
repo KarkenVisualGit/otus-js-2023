@@ -12,4 +12,8 @@ describe("Test isWord", () => {
   it("Must return false for Chick flick", () => {
     expect(isWord("Chick" + "\n" + "flick")).toEqual(false);
   });
+
+  it("Must return true for word", () => {
+    expect(isWord("word")).toEqual(true);
+  });
 });
